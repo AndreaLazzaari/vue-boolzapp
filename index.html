@@ -61,20 +61,22 @@
                 </div>
             </section>
             <section class="conversation-container flex flex-column">
-                <div class="user-profile"></div>
-                <div class="messages clearfix">
+                <div class="user-profile">
+
+                </div>
+                <div class="messages clearfix" v-for="mess in contacts.messages">
                     <article class="message received">
-                        Sciao Belo, stasero vieno?
+                        {{ mess.message}}
                     </article>
                     <article class="message sent">
-                        No dottoressa, veramente sarei occupato.
+                        {{ mess.message}}
                     </article>
                     <article class="message received">
-                        Si ma tu ha serio problemo, sposto sembro!
+                        {{ mess.message}}
                     </article>
-                    <article class="message sent">
-                        Se vengo da una psichiatra ci sara' un motivo!!!!
-                    </article>
+                    <!-- <article class="message sent">
+                        {{ mess.message}}
+                    </article> -->
                 </div>
                 <div class="message-input"></div>
             </section>
