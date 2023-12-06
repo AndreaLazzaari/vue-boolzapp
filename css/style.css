@@ -33,8 +33,7 @@ section div.user-profile{
 }
 
 div.avatar{
-    height: 60px;
-    border-radius: 50%;
+    height: 100%;
     /* background-color: red; */
     width: 15%;
     margin-left: .25rem;
@@ -42,7 +41,7 @@ div.avatar{
 }
 
 div.avatar img{
-    width: 100%;
+    width: 90%;
     border-radius: 50%;
     object-fit: contain;
     object-position: center;
@@ -58,6 +57,7 @@ div.icons{
 
 div.icons i{
     padding: .5rem;
+    color: gray;
 }
 
 section.userbar div.notifications{
@@ -65,9 +65,24 @@ section.userbar div.notifications{
     background-color: #8edafc;
 }
 
+div.bell{
+    height: 90%;
+    /* width: 30%; */
+    border-radius: 50%;
+    background-color: white;
+    color: #8edafc;
+    
+}
+
+div.bell i{
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
 section.userbar div.searchbar{
     height: 60px;
     background-color: #fafafa;
+    padding: 1rem;
 }
 
 section.userbar div.contacts{
