@@ -32,6 +32,34 @@ section div.user-profile{
     background-color: #eaeaea;
 }
 
+div.avatar{
+    height: 60px;
+    border-radius: 50%;
+    /* background-color: red; */
+    width: 15%;
+    margin-left: .25rem;
+    margin-top: .25rem;
+}
+
+div.avatar img{
+    width: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* section div.user-profile p{
+    padding-right: 12rem;
+} */
+
+div.icons{
+    margin-right: 1rem;
+}
+
+div.icons i{
+    padding: .5rem;
+}
+
 section.userbar div.notifications{
     height: 80px;
     background-color: #8edafc;
@@ -89,6 +117,11 @@ main section.conversation-container div.message-input{
 
 .flex-column{
     flex-direction: column;
+}
+
+.flex-bwt{
+    justify-content: space-between;
+    align-items: center;
 }
 
 .clearflix::after{
