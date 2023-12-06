@@ -62,17 +62,22 @@
             </section>
             <section class="conversation-container flex flex-column">
                 <div class="user-profile">
-
+                    <div class="avatar">
+                        <img :src="contacts.avatar" alt="{{ contacts.name}} avatar">
+                    </div>
+                    <p>
+                        {{ contacts.name }}
+                    </p>
                 </div>
                 <div class="messages clearfix" v-for="mess in contacts.messages">
                     <article class="message received">
-                        {{ mess.message}}
+                        
                     </article>
                     <article class="message sent">
-                        {{ mess.message}}
+                        
                     </article>
                     <article class="message received">
-                        {{ mess.message}}
+                        
                     </article>
                     <!-- <article class="message sent">
                         {{ mess.message}}
