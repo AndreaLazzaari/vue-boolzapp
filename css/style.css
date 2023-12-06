@@ -95,6 +95,12 @@ main section.conversation-container{
     background-color: #eaeaea;
 }
 
+div.user-profile div.avatar img{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+}
+
 div.messages{
     height: calc(100% - 145px);
     background-image: url('../img/mine.jpg');
