@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             activeIndex: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -173,6 +174,14 @@ createApp({
     methods: {
         selezionaContatto(index){
             this.activeIndex = index
-        }
-    },
+        },
+        createNewMessage() {
+            let message = {
+                date: '07/12/2023 12:23:44',
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[this.activeIndex].messages.push(message);
+        },
+    }
 }).mount('#app');
