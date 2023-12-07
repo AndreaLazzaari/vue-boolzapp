@@ -88,7 +88,7 @@
                     <span><i class="fa-regular fa-face-smile"></i></span>
                     <div class="input-group mb-3"> 
                         <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Scrivi un messaggio" 
-                        v-model="newMessage" @keyup.enter="createNewMessage()" >
+                        v-model="newMessage" @keyup.enter="createNewMessage()" @keyup.enter="rispostaUtente()" >
                     </div>
                     <span><i class="fa-solid fa-microphone"></i></span>
                 </div>

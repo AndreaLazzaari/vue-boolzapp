@@ -183,5 +183,18 @@ createApp({
             }
             this.contacts[this.activeIndex].messages.push(message);
         },
+        rispostaUtente(){
+            let risposta = {
+                date: '07/12/2023 12:24:01',
+                message: 'ok',
+                status: 'received'
+            }
+            setInterval(this.rispostaUtente,1000)
+            this.contacts[this.activeIndex].messages.push(risposta);
+            
+        },
     }
 }).mount('#app');
+
+
+

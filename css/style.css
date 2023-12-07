@@ -99,6 +99,7 @@ section.userbar div.contacts{
 main section.conversation-container{
     width: 65%;
     background-color: #eaeaea;
+    overflow-y: auto;
 }
 
 div.user-profile div.avatar img{
