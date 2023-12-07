@@ -182,6 +182,8 @@ createApp({
                 status: 'sent'
             }
             this.contacts[this.activeIndex].messages.push(message);
+            setTimeout(this.rispostaUtente,1000)
+
         },
         rispostaUtente(){
             let risposta = {
@@ -189,9 +191,8 @@ createApp({
                 message: 'ok',
                 status: 'received'
             }
-            setInterval(this.rispostaUtente,1000)
-            this.contacts[this.activeIndex].messages.push(risposta);
-            
+
+            this.contacts[this.activeIndex].messages.push(risposta);            
         },
     }
 }).mount('#app');

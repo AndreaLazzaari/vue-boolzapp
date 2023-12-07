@@ -91,9 +91,12 @@ section.userbar div.contacts{
     overflow-y: auto;
 }
 
-/* div.user-profile{
+div.container-contatti{
     padding: 1.5rem;
     width: 100%;
+}
+/* div.user-profile{
+   
 } */
 
 main section.conversation-container{
