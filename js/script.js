@@ -170,4 +170,9 @@ createApp({
             
         }
     },
+    methods: {
+        selezionaContatto(index){
+            this.activeIndex = index
+        }
+    },
 }).mount('#app');

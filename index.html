@@ -22,7 +22,7 @@
         <main class="flex">
             <section class="userbar flex  flex-column">
                 <div class="user-profile flex flex-bwt">
-                    <div class="avatar">
+                    <div class="header-avatar">
                         <img src="./img/avatar_io.jpg" alt="Sonia's avatar">
                     </div>
                     <p>
@@ -50,7 +50,7 @@
                         <input class="form-control me-2" type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
                     </form>
                 </div>
-                <div class="contacts flex" v-for="contact in contacts">
+                <div class="contacts flex" v-for="(contact,activeIndex) in contacts" @click="selezionaContatto(activeIndex)">
                     <!-- TODO: contacts list will show up here -->
                     <div class="avatar">
                         <img :src="contact.avatar" alt="{{ contact.name}} avatar">
@@ -58,11 +58,12 @@
                     <p>
                         {{ contact.name }}
                     </p>
+                    
                 </div>
             </section>
             <section class="conversation-container flex flex-column">
                 <div class="user-profile flex">
-                    <div class="avatar">
+                    <div class="header-avatar">
                         <img :src="contacts[activeIndex].avatar" alt="avatar">
                     </div>
                     <p>
@@ -70,12 +71,12 @@
                     </p>
                 </div>
                 <div class="messages clearfix" v-for="mess in contacts[activeIndex].messages">
-                    <article class="message received">
+                    <article class="message" :class="mess.status === 'sent' ? 'sent' : 'received'">
                         {{ mess.message }}
                     </article>
-                    <article class="message sent">
+                    <!-- <article class="message sent">
                         {{ mess.message }}
-                    </article>
+                    </article> -->
                     <!-- <article class="message received">
                         
                     </article>
@@ -83,7 +84,13 @@
                         {{ mess.message}}
                     </article> --> 
                 </div>
-                <div class="message-input"></div>
+                <div class="message-input d-flex justify-content-around">
+                    <span><i class="fa-regular fa-face-smile"></i></span>
+                    <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Scrivi un messaggio">
+                    </div>
+                    <span><i class="fa-solid fa-microphone"></i></span>
+                </div>
             </section>
         </main>
     </div>
